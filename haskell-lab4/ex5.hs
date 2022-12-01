@@ -28,10 +28,11 @@ data BinTree a = EmptyBT |
 
 
 instance Eq a => Eq (BinTree a) where
-    (==) (EmptyBT) (EmptyBT) = True
-    (==) (NodeBT a l r) (EmptyBT) = False
-    (==) (EmptyBT) (NodeBT a l r) = False
+    (==) (EmptyBT) (EmptyBT)                 = True
+    (==) (NodeBT a l r) (EmptyBT)            = False
+    (==) (EmptyBT) (NodeBT a l r)            = False
     (==) (NodeBT a1 l1 r1) (NodeBT a2 l2 r2) = a1 == a2 && l1 == l2 && r1 == r2
+    -- (==) _ _                                 = False
                                                
 -- Tu ciąg dalszy...
 
